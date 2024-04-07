@@ -2,15 +2,16 @@
 using Microsoft.Extensions.Options;
 using MimeKit;
 using Common.Email.Configuration;
+using Common.Email.Interfaces;
 
 namespace Common.Email;
 
 public class EmailService
 {
     private readonly EmailSettings _emailSettings;
-    private readonly ISmtpClient _smtpClient;
+    private readonly Interfaces.ISmtpClient _smtpClient;
 
-    public EmailService(IOptions<EmailSettings> emailSettings, ISmtpClient smtpClient)
+    public EmailService(IOptions<EmailSettings> emailSettings, Interfaces.ISmtpClient smtpClient)
     {
         _emailSettings = emailSettings.Value;
         _smtpClient = smtpClient;

@@ -6,6 +6,30 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <!-- NuGet package info -->
+      <PackageId>ZephyrRelations.Common.Email</PackageId> <!-- The unique identifier for your package -->
+      <MinVerAutoIncrement>patch</MinVerAutoIncrement> <!-- The version of your package -->
+      <Authors>ZephyrRelations Dev Team</Authors> <!-- The author of the package -->
+      <Company>ZephyrRelations</Company> <!-- The company that owns the package -->
+
+      <!-- Optional: These properties are not required, but they are recommended -->
+      <Description>
+        The EmailService class in the Common.Email namespace is responsible for sending emails. It uses the MailKit library to send emails via SMTP. The SendEmailAsync method creates an email message, connects to the SMTP server using settings from the EmailSettings object, sends the email, and then disconnects from the server. If any necessary settings are missing, it throws an InvalidOperationException.
+      </Description> <!-- A description of the package -->
+      <PackageTags>Email</PackageTags> <!-- Tags that help users discover your package -->
+      <PackageProjectUrl></PackageProjectUrl> <!-- The URL of the project -->
+      <PackageLicenseExpression>MIT</PackageLicenseExpression> <!-- The license for the package -->
+
+      <!-- Add these lines to include symbols in the NuGet package -->
+      <DebugType>embedded</DebugType>
+      <DebugSymbols>true</DebugSymbols>
+      <IncludeSymbols>true</IncludeSymbols>
+      <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    </PropertyGroup>
+    
+
+
   <ItemGroup>
     <PackageReference Include="MailKit" Version="4.4.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />

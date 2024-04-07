@@ -1,6 +1,6 @@
 ﻿using System.Net.Mail;
 
-namespace Common.Email;
+namespace Common.Email.Interfaces;
 
 public interface ISmtpClient
 {

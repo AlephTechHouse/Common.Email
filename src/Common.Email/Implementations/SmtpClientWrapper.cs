@@ -1,9 +1,9 @@
 ﻿using MailKit.Net.Smtp;
 using MimeKit;
 
-namespace Common.Email;
+namespace Common.Email.Impremetations;
 
-public class SmtpClientWrapper : ISmtpClient
+public class SmtpClientWrapper : Interfaces.ISmtpClient
 {
     private readonly SmtpClient _smtpClient;
 
