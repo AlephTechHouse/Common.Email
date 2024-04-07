@@ -14,7 +14,7 @@ jobs:
       PROJECT_NAME: 'Common.Email.csproj'
       PROJECT_PATH: 'src/Common.Email'
       PROJECT_NAME_TESTS: 'Common.Email.Tests.csproj'
-      PROJECT_PATH_TESTS: 'src/Common.Email.Test'
+      PROJECT_PATH_TESTS: 'src/Common.Email.Tests'
 
     steps:
       - name: Checkout
