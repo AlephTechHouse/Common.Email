@@ -40,6 +40,10 @@ public class EmailService
         {
             throw new InvalidOperationException("SenderPassword is not set in EmailSettings");
         }
+        if (string.IsNullOrEmpty(recipientEmail))
+        {
+            throw new ArgumentException("Recipient cannot be null or empty", nameof(recipientEmail));
+        }
 
         await _smtpClient.ConnectAsync(_emailSettings.SmtpServer, _emailSettings.SmtpPort, false);
         await _smtpClient.AuthenticateAsync(_emailSettings.SenderEmail, _emailSettings.SenderPassword);
